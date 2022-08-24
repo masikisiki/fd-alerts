@@ -3,5 +3,36 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
+    "fd-alerts": {
+      "projectType": "library",
+      "root": "projects/fd-alerts",
+      "sourceRoot": "projects/fd-alerts/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/fd-alerts/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/fd-alerts/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/fd-alerts/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/fd-alerts/src/test.ts",
+            "tsConfig": "projects/fd-alerts/tsconfig.spec.json",
+            "karmaConfig": "projects/fd-alerts/karma.conf.js"
+          }
+        }
+      }
+    }
   }
 }
