@@ -1,6 +1,6 @@
 {
   "name": "fd-alerts",
-  "version": "0.0.4",
+  "version": "1.0.0",
   "description": "Simple alert module for your angular app",
   "repository": {
     "url": "https://github.com/masikisiki/fd-alerts.git",

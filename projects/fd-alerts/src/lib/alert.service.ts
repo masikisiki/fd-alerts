@@ -21,8 +21,6 @@ export class AlertService {
     this.messages$.next({message: message,type: type});
   }
 
-
-
   showError(message: string){
    this.showToast(message, ToastType.ERROR);
   }
