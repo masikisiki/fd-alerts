@@ -1,6 +1,6 @@
-import { Component, Input, OnInit } from '@angular/core';
-import { ToastMessage, AlertService } from '../alert.service';
-import { trigger, style, animate, transition } from '@angular/animations';
+import {Component, Input, OnInit} from '@angular/core';
+import {AlertService, ToastMessage} from '../alert.service';
+import {animate, style, transition, trigger} from '@angular/animations';
 
 @Component({
   selector: 'fd-alert',
@@ -9,8 +9,8 @@ import { trigger, style, animate, transition } from '@angular/animations';
   animations: [
     trigger('fade', [
       transition('void => *', [
-        style({ opacity: 0 }),
-        animate(500, style({ opacity: 1, }))
+        style({opacity: 0}),
+        animate(500, style({opacity: 1,}))
       ])
     ])
   ]
@@ -20,6 +20,7 @@ export class AlertComponent implements OnInit {
   @Input() timeOut: number = 5000;
 
   messages: ToastMessage[] = [];
+
   constructor(private aService: AlertService) {
     aService.messages$.subscribe(message => {
       this.showHide(message)
@@ -33,10 +34,7 @@ export class AlertComponent implements OnInit {
     }, this.timeOut);
   }
 
-  ngOnInit(): void {
-
-  }
+  ngOnInit(): void {}
 
 }
 
- 

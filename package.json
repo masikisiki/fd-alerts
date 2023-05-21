@@ -5,6 +5,7 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
+    "publish":"npm run build fd-alerts && cd dist/fd-alerts && npm pack && npm publish",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
